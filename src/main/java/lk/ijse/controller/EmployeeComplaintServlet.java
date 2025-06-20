@@ -70,7 +70,7 @@ public class EmployeeComplaintServlet extends HttpServlet {
 
             if (action.equalsIgnoreCase("insert")) {
                 Complaint newComplaint = new Complaint();
-                newComplaint.setComplaintId("CMP-" + UUID.randomUUID().toString().substring(0, 8));
+                newComplaint.setComplaintId("CMS-" + UUID.randomUUID().toString().substring(0, 8));
                 newComplaint.setUserId(userId);
                 newComplaint.setTitle(request.getParameter("title"));
                 newComplaint.setDescription(request.getParameter("description"));

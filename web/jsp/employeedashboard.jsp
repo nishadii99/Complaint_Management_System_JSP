@@ -62,7 +62,6 @@
 
             <!-- Action Buttons -->
             <button type="submit" class="btn-submit">Submit</button>
-            <button type="button" class="btn-clear" onclick="clearForm()">Clear</button>
             <button type="button" class="btn-update" onclick="setFormAction('update')">Update</button>
             <button type="button" class="btn-delete" onclick="confirmDelete()">Delete</button>
         </form>
