@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f3d3e; /* Dark green background */
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: black;
+}
+
+header {
+    position: fixed;
+    font-weight: bolder;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f3d3e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Ensure it's above other content */
+}
+
+
+.login-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #1f4e4e;
+
+
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #0f3d3e;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 6px;
+    display: block;
+    color: #0f3d3e;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #336b6b;
+    background: white;
+    color: #0f3d3e;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #28a745; /* Green accent */
+    outline: none;
+    box-shadow: 0 0 6px #28a74580;
+}
+
+#btn-login {
+    background: linear-gradient(to right, #0f3d3e, #1a5d4e);
+    box-shadow: 0 8px 20px rgba(15, 61, 62, 0.3);
+    color: black;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+#btn-login:hover {
+    background: linear-gradient(to right, #0a2f2f, #174d42);
+    box-shadow: 0 12px 25px rgba(15, 61, 62, 0.4);
+    transform: translateY(-2px);
+
+}
+
+.error {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff6a6a;
+    border-left: 4px solid #ff6a6a;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}

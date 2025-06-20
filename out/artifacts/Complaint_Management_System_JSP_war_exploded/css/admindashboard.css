@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background: #0f3d3e;
+    min-height: 100vh;
+    color: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0f3d3e;
+    padding: 15px 30px;
+    border-bottom: 1px solid #cce5cc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.navbar p{
+    margin-right: 15px ;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+
+}
+
+.navbar a {
+    margin-left:1200px;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #28a745;
+}
+
+.container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+input[type="text"],
+select {
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1.5px solid #b2d8b2;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+}
+
+form p {
+    text-align: center;
+    color: #000;
+}
+
+/* Buttons */
+form button {
+    padding: 12px 24px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button-wrapper button[type="submit"] {
+    background: linear-gradient(to right, #145a32, #1e5631);
+    color: white;
+    box-shadow: 0 8px 20px rgba(20, 90, 50, 0.3);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-wrapper button[type="submit"]:hover {
+    background: linear-gradient(to right, #0e3b22, #194d2a);
+    box-shadow: 0 12px 25px rgba(20, 90, 50, 0.4);
+    transform: translateY(-2px);
+}
+
+
+form[action$="delete"] button[type="submit"],
+.delete-btn {
+    background-color: #c82333;
+    color: white;
+    box-shadow: 0 8px 20px rgba(200, 35, 51, 0.3);
+}
+/* Table column sizing */
+.complaints-table td:nth-child(4) { /* Description column */
+    width: 180px;
+    max-width: 180px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.complaints-table td:nth-child(8), /* Actions column */
+.complaints-table th:nth-child(8) {
+    width: 250px;
+}
+
+/* Full table style remains unchanged */
+.complaints-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.complaints-table th,
+.complaints-table td {
+    border: 1px solid #cce5cc;
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.complaints-table th {
+    background-color: #d4edda;
+    font-weight: 600;
+    color: #145a32;
+}
+
+.complaints-table tr:nth-child(even) {
+    background-color: #f6fdf6;
+}
+
+.complaints-table tr:hover {
+    background-color: #e0f7e0;
+    transition: background-color 0.3s;
+}
+
+
+/* 🔧 Action Button Container */
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.action-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* 🛠 Make input & select fit well inside each form */
+.action-form select,
+.action-form input[type="text"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+}
+
+/* 🧱 Button sizing inside horizontal form */
+.action-form button {
+    margin-top: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .complaints-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .action-form {
+        gap: 4px;
+    }
+
+    .action-form button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
